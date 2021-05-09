@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{025BB815-BF60-4294-968D-990581AA5F5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\getRoomStateResponse.cs" />
+    <Compile Include="classes\QuestionResponse.cs" />
+    <Compile Include="classes\resultResponse.cs" />
+    <Compile Include="classes\RoomProp.cs" />
+    <Compile Include="classes\CreateRoomRespone.cs" />
+    <Compile Include="classes\ErrRespone.cs" />
+    <Compile Include="classes\HighScoreResponse.cs" />
+    <Compile Include="classes\joinRoomRespone.cs" />
+    <Compile Include="classes\PlayersList.cs" />
+    <Compile Include="classes\global.cs" />
+    <Compile Include="classes\logout.cs" />
+    <Compile Include="classes\RoomsList.cs" />
+    <Compile Include="classes\send.cs" />
+    <Compile Include="classes\statusRespone.cs" />
+    <Compile Include="classes\submitAns.cs" />
+    <Compile Include="classes\submitResponse.cs" />
+    <Compile Include="forms\AfterCreateOrJoinRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AfterCreateOrJoinRoom.Designer.cs">
+      <DependentUpon>AfterCreateOrJoinRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\AfterGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AfterGame.Designer.cs">
+      <DependentUpon>AfterGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BestScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BestScores.Designer.cs">
+      <DependentUpon>BestScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\CreateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CreateRoom.Designer.cs">
+      <DependentUpon>CreateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\JoinRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\JoinRoom.Designer.cs">
+      <DependentUpon>JoinRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\loginAndSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\loginAndSignup.Designer.cs">
+      <DependentUpon>loginAndSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Mystatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Mystatus.Designer.cs">
+      <DependentUpon>Mystatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="classes\SignupReq.cs" />
+    <EmbeddedResource Include="forms\AfterCreateOrJoinRoom.resx">
+      <DependentUpon>AfterCreateOrJoinRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\AfterGame.resx">
+      <DependentUpon>AfterGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BestScores.resx">
+      <DependentUpon>BestScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\CreateRoom.resx">
+      <DependentUpon>CreateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\JoinRoom.resx">
+      <DependentUpon>JoinRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\loginAndSignup.resx">
+      <DependentUpon>loginAndSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Mystatus.resx">
+      <DependentUpon>Mystatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game.jpg" />
+    <Content Include="Resources\Untitled.jpg" />
+    <None Include="Resources\SIGNUP.jpg" />
+    <None Include="Resources\Login.jpg" />
+    <None Include="Resources\EXIT.jpg" />
+    <None Include="Resources\Mystatus.jpg" />
+    <Content Include="icon.ico" />
+    <Content Include="Resources\AfterCreateOrJoin.jpg" />
+    <Content Include="Resources\BestScore.jpg" />
+    <Content Include="Resources\CreateRoom.jpg" />
+    <Content Include="Resources\EndGame.jpg" />
+    <Content Include="Resources\NewSignUp.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
