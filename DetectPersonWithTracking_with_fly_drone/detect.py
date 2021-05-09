@@ -81,13 +81,14 @@ def tracking(objects, rects):
                     drone.goto_position_target_local_ned(0, 0, 0.1)
             else:
                 print("y in the center")
-            # detectionArea = abs(endX-startX) * abs(endY-startY)
-            # if detectionArea > 30:
-            #     print("go back")
-            # elif detectionArea < 60:
-            #     print("go forward")
-            # else:
-            #     print("At the right distance")
+            
+            detectionArea = abs(endX-startX) * abs(endY-startY)
+            if detectionArea > 30:
+                print("go back")
+            elif detectionArea < 60:
+                print("go forward")
+            else:
+                print("At the right distance")
 
 
 
